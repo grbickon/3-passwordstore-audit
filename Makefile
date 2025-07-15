@@ -43,3 +43,5 @@ endif
 
 deploy:
 	@forge script script/DeployPasswordStore.s.sol:DeployPasswordStore $(NETWORK_ARGS)
+
+foundry :; curl -L https://foundry.paradigm.xyz | bash
