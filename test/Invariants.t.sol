@@ -39,4 +39,8 @@ contract Invariants is StdInvariant, TestUtilities {
         assertEq(owner, getOwner(passwordStore));
     }
 
+    function invariant_ownerCanAlwaysGetPassword() public {
+        vm.prank(owner);
+        passwordStore.getPassword();
+    }
 }
